@@ -130,8 +130,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Jrory" type="application/atom+xml" />
 
@@ -147,7 +145,7 @@
 <meta property="og:site_name" content="Jrory">
 <meta property="og:description" content="var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:false,&quot;showlrc&quot;:3,&quot;mutex&quot;:true,&quot;music&quot;:[{&quot;title&quot;:&quot;远走高飞&quot;,&quot;author&quot;:&quot;金志文、徐佳莹&quot;,&quot;url&quot;:&quot;http://sc1.111ttt.cn:8282/2017/1/05m/09/298092036393.m4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-23T14:54:10.000Z">
+<meta property="og:updated_time" content="2018-05-23T15:25:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="music">
 <meta name="twitter:description" content="var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:false,&quot;showlrc&quot;:3,&quot;mutex&quot;:true,&quot;music&quot;:[{&quot;title&quot;:&quot;远走高飞&quot;,&quot;author&quot;:&quot;金志文、徐佳莹&quot;,&quot;url&quot;:&quot;http://sc1.111ttt.cn:8282/2017/1/05m/09/298092036393.m4">
@@ -223,7 +221,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Viva La Vida</p>
+        <p class="site-subtitle">Never Give Up</p>
       
   </div>
 
@@ -273,12 +271,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-music">
+          <a href="/music/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
             
-            标签
+            音乐
           </a>
         </li>
       
@@ -375,10 +373,10 @@
         
         
           
-        <div id="aplayer-SRnmncAq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-ZkhYxwcA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
-				  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mutex":true,"music":[{"title":"远走高飞","author":"金志文、徐佳莹","url":"http://sc1.111ttt.cn:8282/2017/1/05m/09/298092036393.m4a?tflag=1519095601&amp;pin=6cd414115fdb9a950d827487b16b5f97#.mp3","pic":"","lrc":""}]};
-				  options.element = document.getElementById("aplayer-SRnmncAq");
+				  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mutex":true,"music":[{"title":"远走高飞","author":"金志文、徐佳莹","url":"http://sc1.111ttt.cn:8282/2017/1/05m/09/298092036393.m4a?tflag=1519095601&amp;pin=6cd414115fdb9a950d827487b16b5f97#.mp3","pic":"http://aliyunimg.9ku.com/9kuimg/zhuanji/20170424/96052d3a3fd04d4a.jpg?x-oss-process=image/resize,m_fill,w_150,h_150,limit_0/auto-orient,0","lrc":""}]};
+				  options.element = document.getElementById("aplayer-ZkhYxwcA");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -467,6 +465,22 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -711,7 +725,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
