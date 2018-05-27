@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jrory.github.io/music/index.html</loc>
+    
+    <lastmod>2018-05-27T03:06:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jrory.github.io/top/index.html</loc>
+    
+    <lastmod>2018-05-27T02:12:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jrory.github.io/text.html</loc>
     
     <lastmod>2018-05-26T06:05:14.000Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://jrory.github.io/top/index.html</loc>
-    
-    <lastmod>2018-05-23T17:06:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jrory.github.io/categories/index.html</loc>
     
     <lastmod>2018-05-23T17:06:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jrory.github.io/music/index.html</loc>
-    
-    <lastmod>2018-05-23T15:25:47.000Z</lastmod>
     
   </url>
   
