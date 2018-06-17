@@ -11,4 +11,26 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[智力逻辑摘选（Jrory）]]></title>
+    <url>%2F%E6%99%BA%E5%88%A9%E9%80%BB%E8%BE%91.html</url>
+    <content type="text"><![CDATA[问题一 五个海盗抢到了100颗宝石，每一颗都一样大小和价值连城。他们决定这么分： 抽签决定自己的号码（1、2、3、4、5） 首先，由1号提出分配方案，然后大家表决，当且仅当超过半数的人同意时，按照他的方案进行分配，否则将被扔进大海喂鲨鱼如果1号死后，再由2号提出分配方案，然后剩下的4人进行表决，当且仅当超过半数的人同意时，按照他的方案进行分配，否则将被扔入大海喂鲨鱼，依此类推。条件：每个海盗都是很聪明的人，都能很理智地做出判断，从而做出选择。问题：第一个海盗提出怎样的分配方案才能使自己的收益最大化？ 123456分析方案:假设1、2、3号都死了，只剩4号和5号．这时无论4号怎么分（哪怕分5号100个），5号只要反对，4号就死了（因为没有超过半数同意，非要大于50%才行），4号的生命得不到保障，所以，4号不能让3号死，3号死了4号危险，所以，3号不论怎么分，4号都得同意．假设1、2号死了，3号来分的话，他肯定分自己100个，4号和5号都0个，因为3号肯定同意，4号也必须同意，就有大于50%的选票．假设1号死了,2号来分．2号肯定不会收买3号，收买4号和5号更好些，因为只要给他们1人1个,4号和5号就都得同意（由假设2，2号死了的话，4号和5号一个也分不到，现在2号给了他们1人1个，他们只得同意，2号会这么分98、0、1、1）假设1号来分，他不会收买2号，那起码要给2号99个才行，他肯定会收买3号，因为给3号1个，3号就会同意1号的分法，3号要是不同意，1号死了2号分的话，3号一个也得不到，这时1号只要再收买4号和5号中任何一人就行了，给这个人两个，他就必须同意．所以，1号的分配方案为：97、0、1、2、0 或97、0、1、0、2．结果：第一个海盗提出依次是：97，0，1，0，2； 或者是：97，0，1，2，0的分配方案才能够使自己的收益最大化]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>智力</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[The-Art-Of-Programming整理（Jrory）]]></title>
+    <url>%2FThe-Art-Of-Programming.html</url>
+    <content type="text"><![CDATA[字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述： 给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部 如实现abcdef-&gt;cdefab的转换。 分析过程： 最直接的使用暴力位移法，此处介绍另一种方法－－三次翻转法（时间复杂度O(n)，空间复杂度O(1)） “abcdef”-&gt;”cdefab”: 先翻转ab: abcdef-&gt;bacdef 再翻转cdef: bacdef-&gt;bafedc 最后翻转整个字符串: bafedc-&gt;cdefab 代码示例： 1234567891011121314151617void ReverseString(char* s,int from,int to)&#123; while (from &lt; to) &#123; char t = s[from]; s[from++] = s[to]; s[to--] = t; &#125;&#125;void LeftRotateString(char* s,int n,int m)&#123; m %= n; //若要左移动大于n位，那么和%n 是等价的 ReverseString(s, 0, m - 1); //反转[0..m - 1]，套用到上面举的例子中，就是X-&gt;X^T，即 abc-&gt;cba ReverseString(s, m, n - 1); //反转[m..n - 1]，例如Y-&gt;Y^T，即 def-&gt;fed ReverseString(s, 0, n - 1); //反转[0..n - 1]，即如整个反转，(X^TY^T)^T=YX，即 cbafed-&gt;defabc。&#125; 字符串包含问题描述： 给定两个分别由字母组成的字符串A和字符串B，字符串B的长度比字符串A短。请问，如何最快地判断字符串B中所有字母是否都在字符串A里 分析过程： 这个问题有多种解法：最直接的排序遍历，此处介绍一种构造hashtable的方法实现 我们可以对字符串A，用位运算（26bit整数表示)计算出一个签名，再用B中的字符到A里面进行查找 代码示例： 12345678910111213141516171819202122232425262728293031323334// “最好的方法”，时间复杂度O(n + m)，空间复杂度O(1)bool StringContain(string &amp;a,string &amp;b)&#123; int hash = 0; for (int i = 0; i &lt; a.length(); ++i) &#123; hash |= (1 &lt;&lt; (a[i] - 'A')); &#125; for (int i = 0; i &lt; b.length(); ++i) &#123; if ((hash &amp; (1 &lt;&lt; (b[i] - 'A'))) == 0) &#123; return false; &#125; &#125; return true;&#125;//这个方法的实质是用一个整数代替了hashtable，空间复杂度为O(1)，时间复杂度还是O(n + m)。// 问题二：变位词(相同字母不同顺序组成的单词)判断// 第一步：给每一个单词加签（选择合适的加签算法，保证变位词的签名一致）// 第二步：将签作为key，单词作为value存放于map中void anagrams(vector&lt;string&gt; &amp;v, map&lt;string, string&gt; &amp;dict)&#123; string temp; for(int i=0; i&lt;v.size(); i++) &#123; temp=v[i]; sort(v[i].begin(), v[i].end()); dict[v[i]] += temp +" "; &#125;&#125; 最长回文字串Manacher算法：O(N)解法分析过程： 首先通过在每个字符的两边都插入一个特殊的符号，将所有可能的奇数或偶数长度的回文子串都转换成了奇数长度。比如 abba 变成 #a#b#b#a#。 此外，为了进一步减少编码的复杂度，可以在字符串的开始加入另一个特殊字符，这样就不用特殊处理越界问题，比如$#a#b#a# 以字符串12212321为例，插入#和$这两个特殊符号，变成了 S[] = &quot;$#1#2#2#1#2#3#2#1#&quot;，然后用一个数组 P[i] 来记录以字符S[i]为中心的最长回文子串向左或向右扩张的长度（包括S[i]）。 比如S和P的对应关系： S # 1 # 2 # 2 # 1 # 2 # 3 # 2 # 1 # P 1 2 1 2 5 2 1 4 1 2 1 6 1 2 1 2 1 可以看出，P[i]-1正好是原字符串中最长回文串的总长度，为5。 接下来怎么计算P[i]呢？Manacher算法增加两个辅助变量id和mx，其中id表示最大回文子串中心的位置，mx则为id+P[id]，也就是最大回文子串的边界。得到一个很重要的结论： 如果mx &gt; i，那么P[i] &gt;= Min(P[2 * id - i], mx - i) 代码解释如下： 123456//mx &gt; i，那么P[i] &gt;= MIN(P[2 * id - i], mx - i)//故谁小取谁if (mx - i &gt; P[2*id - i]) P[i] = P[2*id - i];else //mx-i &lt;= P[2*id - i] P[i] = mx - i; 下面，令j = 2*id - i，也就是说j是i关于id的对称点。 当 mx - i &gt; P[j] 的时候，以S[j]为中心的回文子串包含在以S[id]为中心的回文子串中，由于i和j对称，以S[i]为中心的回文子串必然包含在以S[id]为中心的回文子串中，所以必有P[i] = P[j]； 当 P[j] &gt;= mx - i 的时候，以S[j]为中心的回文子串不一定完全包含于以S[id]为中心的回文子串中，但是基于对称性可知，以S[i]为中心的回文子串，其向右至少会扩张到mx的位置，也就是说P[i] &gt;= mx - i。至于mx之后的部分是否对称，再具体匹配。 [] 此外，对于 mx &lt;= i 的情况，因为无法对 P[i]做更多的假设，只能让P[i] = 1，然后再去匹配 综上，关键代码如下： 123456789101112131415//输入，并处理得到字符串sint p[1000], mx = 0, id = 0;memset(p, 0, sizeof(p));for (i = 1; s[i] != '\0'; i++) &#123; p[i] = mx &gt; i ? min(p[2 * id - i], mx - i) : 1; while (s[i + p[i]] == s[i - p[i]]) p[i]++; if (i + p[i] &gt; mx) &#123; mx = i + p[i]; id = i; &#125;&#125;//找出p[i]中最大的 字符串全排列解法分析： 递归实现 取出数组中第一个元素放到最后，即a[1]与a[n]交换，然后递归求a[n-1]的全排列 如果数组只有一个元素n=1，a={1} 则全排列就是{1} 如果数组有两个元素n=2，a={1,2} 则全排列是: {2,1}--a[1]与a[2]交换。交换后求a[2-1]={2}的全排列，归结到1) {1,2}--a[2]与a[2]交换。交换后求a[2-1]={1}的全排列，归结到1) 如果数组有三个元素n=3，a={1,2,3} 则全排列是: a[i]分别与a[len]交换，然后每一步转换成上一步操作 代码示例 1234567891011121314151617181920212223 void CalcAllPermutation(char* perm, int from, int to)&#123; if (to &lt;= 1) &#123; return; &#125; if (from == to) &#123; for (int i = 0; i &lt;= to; i++) cout &lt;&lt; perm[i]; cout &lt;&lt; endl; &#125; else &#123; for (int j = from; j &lt;= to; j++) &#123; swap(perm[j], perm[from]); CalcAllPermutation(perm, from + 1, to); swap(perm[j], perm[from]); &#125; &#125;&#125; 字典序排列：利用STL中的next_permutation算法实现]]></content>
+      <categories>
+        <category>The-Art-Of-Programming</category>
+      </categories>
+      <tags>
+        <tag>The-Art-Of-Programming</tag>
+      </tags>
+  </entry>
 </search>
