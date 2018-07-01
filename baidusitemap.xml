@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>https://jrory.github.io/The-Art-Of-Programming.html</loc>
-    <lastmod>2018-07-01T14:34:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>The-Art-Of-Programming整理（Jrory）</title>
-        <pubTime>2016-07-24T00:29:32.000Z</pubTime>
-        
-        <tag>The-Art-Of-Programming</tag>
-         
-         
-           
-             
-              <breadCrumb title="The-Art-Of-Programming" url="https://jrory.github.io/categories/The-Art-Of-Programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://jrory.github.io/%E6%99%BA%E5%8A%9B%E9%80%BB%E8%BE%91.html</loc>
-    <lastmod>2018-06-10T07:31:27.000Z</lastmod>
+    <lastmod>2018-07-01T14:38:54.000Z</lastmod>
     <data>
         <display>
         <title>智力逻辑摘选（Jrory）</title>
@@ -43,13 +23,9 @@
     </url>
 
     
-    
-    
-    
-    
   <url>
     <loc>https://jrory.github.io/text.html</loc>
-    <lastmod>2018-05-26T06:05:14.000Z</lastmod>
+    <lastmod>2018-07-01T14:37:59.000Z</lastmod>
     <data>
         <display>
         <title>Markdown 概述（Jrory）</title>
@@ -66,5 +42,29 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://jrory.github.io/The-Art-Of-Programming.html</loc>
+    <lastmod>2018-07-01T14:36:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>The-Art-Of-Programming整理（Jrory）</title>
+        <pubTime>2016-07-24T00:29:32.000Z</pubTime>
+        
+        <tag>The-Art-Of-Programming</tag>
+         
+         
+           
+             
+              <breadCrumb title="The-Art-Of-Programming" url="https://jrory.github.io/categories/The-Art-Of-Programming/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
     
 </urlset>
