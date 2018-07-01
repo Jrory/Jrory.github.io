@@ -1899,7 +1899,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #590bff;
+  background: #3c8e53;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2964,6 +2964,9 @@ h6 {
 code {
   margin: 0px 4px;
 }
+.highlight {
+  border-radius: 15px;
+}
 .highlight figcaption {
   margin: 0em;
   padding: 0.5em;
@@ -3478,6 +3481,47 @@ code.description {
   .menu .menu-item {
     margin: 0px 10px !important;
   }
+}
+.hider_title {
+  border: 1px solid #a166ab;
+  padding: 0px;
+  width: 70px;
+  background-color: #a166ab;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: #666 0px 0px 10px;
+  -moz-box-shadow: #666 0px 0px 10px;
+  box-shadow: #666 0px 0px 10px;
+  cursor: pointer;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
+}
+.post-body a {
+  text-decoration: none;
+}
+.post-body a:hover {
+  text-decoration: none;
+}
+a.categories {
+  text-decoration: none;
+}
+a.categories:hover {
+  text-decoration: none;
+}
+.post-toc ol a {
+  color: #07b39b;
+  border-bottom: 0px solid #607d8b;
+}
+a {
+  border-bottom: 0px solid #999;
+}
+.post-tags {
+  display: none;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {

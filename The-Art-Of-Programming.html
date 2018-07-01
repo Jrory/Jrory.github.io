@@ -110,10 +110,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=5.1.3">
 
 
   <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=5.1.3" color="#fff">
@@ -139,20 +139,20 @@
 
 
 
-<meta name="description" content="字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转换。">
+<meta name="description" content="img { border-radius: 15px; }   字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转">
 <meta name="keywords" content="The-Art-Of-Programming">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The-Art-Of-Programming整理（Jrory）">
 <meta property="og:url" content="https://jrory.github.io/The-Art-Of-Programming.html">
 <meta property="og:site_name" content="Jrory">
-<meta property="og:description" content="字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转换。">
+<meta property="og:description" content="img { border-radius: 15px; }   字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p9favw02y.bkt.clouddn.com/Manacher.png">
-<meta property="og:updated_time" content="2018-06-18T03:56:11.000Z">
+<meta property="og:image" content="http://p9favw02y.bkt.clouddn.com/Manacher01.png">
+<meta property="og:updated_time" content="2018-07-01T06:08:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The-Art-Of-Programming整理（Jrory）">
-<meta name="twitter:description" content="字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转换。">
-<meta name="twitter:image" content="http://p9favw02y.bkt.clouddn.com/Manacher.png">
+<meta name="twitter:description" content="img { border-radius: 15px; }   字符串本章重点介绍6个经典的字符串问题，分别是旋转字符串、字符串包含、字符串转换成整数、回文判断、最长回文子串、字符串的全排列，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。 旋转字符串问题描述：  给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部    如实现abcdef-&amp;gt;cdefab的转">
+<meta name="twitter:image" content="http://p9favw02y.bkt.clouddn.com/Manacher01.png">
 
 
 
@@ -465,7 +465,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,128 字
+                  3,135 字
                 </span>
               
 
@@ -491,6 +491,12 @@
 
       
         <hr>
+<style>
+img {
+border-radius: 15px;
+}
+</style>
+
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>本章重点介绍6个经典的字符串问题，分别是<strong>旋转字符串</strong>、<strong>字符串包含</strong>、<strong>字符串转换成整数</strong>、<strong>回文判断</strong>、<strong>最长回文子串</strong>、<strong>字符串的全排列</strong>，这6个问题要么从暴力解法入手，然后逐步优化，要么多种思路多种解法。</p>
 <h4 id="旋转字符串"><a href="#旋转字符串" class="headerlink" title="旋转字符串"></a><a href="https://github.com/Jrory/The-Art-Of-Programming-By-July/blob/master/ebook/zh/01.01.md" target="_blank" rel="noopener">旋转字符串</a></h4><p>问题描述：</p>
 <ul>
@@ -558,7 +564,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="http://p9favw02y.bkt.clouddn.com/Manacher.png" alt="">]</p>
+<p><img src="http://p9favw02y.bkt.clouddn.com/Manacher01.png" alt=""></p>
 <ul>
 <li><p>此外，对于 <code>mx &lt;= i</code> 的情况，因为无法对 <code>P[i]</code>做更多的假设，只能让<code>P[i] = 1</code>，然后再去匹配</p>
 </li>
@@ -606,6 +612,85 @@
 <li>另一种利用非递归的方式构造格雷码，非常简洁的代码</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; grayCode(<span class="keyword">int</span> n) &#123;  </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;res;  </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="number">1</span>&lt;&lt;n);i++)&#123;<span class="comment">//执行2^n次，因为n位格雷码总共有2^n个编码  </span></span><br><span class="line">            res.push_back(i^(i&gt;&gt;<span class="number">1</span>));<span class="comment">//关键步骤，利用异或运算产生和当前编码有且只有一位不同的格雷码  </span></span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> res;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div><div class="fold_hider"><div class="close hider_title">小结扩展</div></div><div class="fold">
+<ul>
+<li>① 第一个只出现一次的字符</li>
+</ul>
+<blockquote>
+<p>在一个字符串中找到第一个只出现一次的字符。如输入<code>abaccdeff</code>，则输出b。</p>
+</blockquote>
+<ul>
+<li>② 对称子字符串的最大长度</li>
+</ul>
+<blockquote>
+<p>输入一个字符串，输出该字符串中对称的子字符串的最大长度。比如输入字符串<code>google</code>，由于该字符串里最长的对称子字符串是<code>goog</code>，因此输出4。<br>提示：可能很多人都写过判断一个字符串是不是对称的函数，这个题目可以看成是该函数的加强版。</p>
+</blockquote>
+<ul>
+<li>③ 编程判断俩个链表是否相交</li>
+</ul>
+<blockquote>
+<p>给出俩个单向链表的头指针，比如h1，h2，判断这俩个链表是否相交。为了简化问题，我们假设俩个链表均不带环。<br>问题扩展：<br>如果链表可能有环列?<br>如果需要求出俩个链表相交的第一个节点列?</p>
+</blockquote>
+<ul>
+<li>④ 逆序输出链表</li>
+</ul>
+<blockquote>
+<p>输入一个链表的头结点，从尾到头反过来输出每个结点的值。</p>
+</blockquote>
+<ul>
+<li>⑤ 在<code>O(1)</code>时间内删除单链表结点</li>
+</ul>
+<blockquote>
+<p>给定单链表的一个结点的指针，同时该结点不是尾结点，此外没有指向其它任何结点的指针，请在<code>O(1)</code>时间内删除该结点。</p>
+</blockquote>
+<ul>
+<li>⑥ 找出链表的第一个公共结点</li>
+</ul>
+<blockquote>
+<p>两个单向链表，找出它们的第一个公共结点。</p>
+</blockquote>
+<ul>
+<li>⑦ 在字符串中删除特定的字符</li>
+</ul>
+<blockquote>
+<p>输入两个字符串，从第一字符串中删除第二个字符串中所有的字符。<br>例如，输入<code>They are students.</code>和<code>aeiou</code>，则删除之后的第一个字符串变成<code>Thy r stdnts.</code>。</p>
+</blockquote>
+<ul>
+<li>⑧字符串的匹配</li>
+</ul>
+<blockquote>
+<p>在一篇英文文章中查找指定的人名，人名使用二十六个英文字母（可以是大写或小写）、空格以及两个通配符组成<code>* ?</code>，通配符<code>*</code>表示零个或多个任意字母，通配符<code>?</code>表示一个任意字母。如：<code>J* Smi??</code> 可以匹配<code>John Smith</code> .</p>
+</blockquote>
+<ul>
+<li>⑨ 字符个数的统计</li>
+</ul>
+<blockquote>
+<p><code>char *str = &quot;AbcABca&quot;</code> 写出一个函数，查找出每个字符的个数，区分大小写，要求时间复杂度是n（提示用<code>ASCII</code>码）</p>
+</blockquote>
+<ul>
+<li>⑩ 最小子串</li>
+</ul>
+<blockquote>
+<p>给一篇文章，里面是由一个个单词组成，单词中间空格隔开，再给一个字符串指针数组，比如 <code>char *str[]={&quot;hello&quot;,&quot;world&quot;,&quot;good&quot;};</code><br>求文章中包含这个字符串指针数组的最小子串。注意，只要包含即可，没有顺序要求。<br>提示：文章也可以理解为一个大的字符串数组，单词之前只有空格，没有标点符号。</p>
+</blockquote>
+
+</div></div>
+<hr>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="寻找第k小的数"><a href="#寻找第k小的数" class="headerlink" title="寻找第k小的数"></a><a href="https://github.com/Jrory/The-Art-Of-Programming-By-July/blob/master/ebook/zh/02.01.md" target="_blank" rel="noopener">寻找第k小的数</a></h4><p>问题描述：</p>
+<ul>
+<li>输入n个整数，输出其中第k小的</li>
+</ul>
+<p>分析过程：</p>
+<blockquote>
+<ul>
+<li>选取S中一个元素作为枢纽元v，将集合S-{v}分割成S1和S2，就像快速排序那样</li>
+<li>如果k &lt;= |S1|，那么第k个最小元素必然在S1中。在这种情况下，返回QuickSelect(S1, k)。<br>如果k = 1 + |S1|，那么枢纽元素就是第k个最小元素，即找到，直接返回它。</li>
+<li>否则，这第k个最小元素就在S2中，即S2中的第（k - |S1| - 1）个最小元素，我们递归调用并返回QuickSelect(S2, k - |S1| - 1)。<br>代码示例：</li>
+<li>此算法的平均运行时间为O(n)。</li>
+</ul>
+</blockquote>
+<p>代码示例：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//QuickSelect 将第k小的元素放在 a[k-1]  </span></span><br><span class="line">void <span class="type">QuickSelect</span>( int a[], int k, int <span class="keyword">left</span>, int <span class="keyword">right</span> )</span><br><span class="line">&#123;</span><br><span class="line">    int i, j;</span><br><span class="line">    int pivot;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>( <span class="keyword">left</span> + cutoff &lt;= <span class="keyword">right</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        pivot = median3( a, <span class="keyword">left</span>, <span class="keyword">right</span> );</span><br><span class="line">        <span class="comment">//取三数中值作为枢纽元，可以很大程度上避免最坏情况</span></span><br><span class="line">        i = <span class="keyword">left</span>; j = <span class="keyword">right</span> - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>( ; ; )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>( a[ ++i ] &lt; pivot )&#123; &#125;</span><br><span class="line">            <span class="keyword">while</span>( a[ --j ] &gt; pivot )&#123; &#125;</span><br><span class="line">            <span class="keyword">if</span>( i &lt; j )</span><br><span class="line">                <span class="built_in">swap</span>( &amp;a[ i ], &amp;a[ j ] );</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//重置枢纽元</span></span><br><span class="line">        <span class="built_in">swap</span>( &amp;a[ i ], &amp;a[ <span class="keyword">right</span> - <span class="number">1</span> ] );  </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>( k &lt;= i )</span><br><span class="line">            <span class="type">QuickSelect</span>( a, k, <span class="keyword">left</span>, i - <span class="number">1</span> );</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>( k &gt; i + <span class="number">1</span> )</span><br><span class="line">            <span class="type">QuickSelect</span>( a, k, i + <span class="number">1</span>, <span class="keyword">right</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>  </span><br><span class="line">        <span class="type">InsertSort</span>( a + <span class="keyword">left</span>, <span class="keyword">right</span> - <span class="keyword">left</span> + <span class="number">1</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -648,7 +733,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/智利逻辑.html" rel="next" title="智力逻辑摘选（Jrory）">
+              <a href="/智力逻辑.html" rel="next" title="智力逻辑摘选（Jrory）">
                 <i class="fa fa-chevron-left"></i> 智力逻辑摘选（Jrory）
               </a>
             
@@ -835,7 +920,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#旋转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">旋转字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串包含"><span class="nav-number">1.2.</span> <span class="nav-text">字符串包含</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最长回文字串"><span class="nav-number">1.3.</span> <span class="nav-text">最长回文字串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串全排列"><span class="nav-number">1.4.</span> <span class="nav-text">字符串全排列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字母组合"><span class="nav-number">1.5.</span> <span class="nav-text">字母组合</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#旋转字符串"><span class="nav-number">1.1.</span> <span class="nav-text">旋转字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串包含"><span class="nav-number">1.2.</span> <span class="nav-text">字符串包含</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最长回文字串"><span class="nav-number">1.3.</span> <span class="nav-text">最长回文字串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串全排列"><span class="nav-number">1.4.</span> <span class="nav-text">字符串全排列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字母组合"><span class="nav-number">1.5.</span> <span class="nav-text">字母组合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#寻找第k小的数"><span class="nav-number">2.1.</span> <span class="nav-text">寻找第k小的数</span></a></li></ol></li></ol></div>
             
 
           </div>
