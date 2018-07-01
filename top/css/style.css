@@ -97,5 +97,5 @@ a:hover { color: #90bcd0; }
 #model05:hover div.bottom { z-index:990; background-color:#340e43; 
 	background:-moz-linear-gradient(-90deg, #340e43, #1a0721); background:-webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721)); }
 
-#apple { clear:both; margin-top:-20px; position:relative; z-index:-1; }
+#apple { clear:both; margin-top:-30px; position:relative; z-index:-1; }
 #apple p { float:right; padding-top:50px; }
