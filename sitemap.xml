@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jrory.github.io/The-Art-Of-Programming.html</loc>
+    
+    <lastmod>2018-07-08T15:47:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jrory.github.io/top/index.html</loc>
     
     <lastmod>2018-07-01T15:20:13.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://jrory.github.io/text.html</loc>
     
     <lastmod>2018-07-01T14:37:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jrory.github.io/The-Art-Of-Programming.html</loc>
-    
-    <lastmod>2018-07-01T14:36:47.000Z</lastmod>
     
   </url>
   
